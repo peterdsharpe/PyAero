@@ -1204,9 +1204,9 @@ class BlockMesh:
         # so here NDIM will be 2
         cells = [('quad', connectivity), ('line', tags['airfoil']+tags['inlet']+tags['outlet'])]
         cell_data={'su2:tag': [np.zeros(len(connectivity), dtype=int),
-                               np.array(num_airfoil_edges*[1] +
-                                        num_inlet_edges*[2] +
-                                        num_outlet_edges*[3])]}
+                               np.array(num_airfoil_edges*['AIRFOIL'] +
+                                        num_inlet_edges*['INLET'] +
+                                        num_outlet_edges*['OUTLET'])]}
         meshio.write_points_cells(name, vertices, cells, cell_data=cell_data)
 
         basename = os.path.basename(name)
