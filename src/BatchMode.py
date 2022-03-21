@@ -19,15 +19,15 @@ class Batch:
         self.app.mainwindow = self
         self.load_batch_control(batch_controlfile)
 
-        stars = 50
-        message_stars = stars*'*'
-        print('\n' + message_stars)
-        message = '{:*^{stars}}'.format(' PYAERO batch meshing ', stars=stars)
-        print(message)
-        message = '{:*^{stars}}'.format('  v' + __version__ + '  ', stars=stars)
-        print(message)
-        logger.info(message)
-        print(message_stars + '\n')
+        # stars = 50
+        # message_stars = stars*'*'
+        # print('\n' + message_stars)
+        # message = '{:*^{stars}}'.format(' PYAERO batch meshing ', stars=stars)
+        # print(message)
+        # message = '{:*^{stars}}'.format('  v' + __version__ + '  ', stars=stars)
+        # print(message)
+        # logger.info(message)
+        # print(message_stars + '\n')
 
 
     def load_batch_control(self, batch_controlfile):
