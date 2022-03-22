@@ -41,27 +41,27 @@ class Batch:
         mesh_path = self.batch_control['Output formats']['path']
         output_formats = self.batch_control['Output formats']['formats']
 
-        print('Airfoil path is', airfoil_path)
-        print('Mesh output path is', mesh_path, '\n')
+        # print('Airfoil path is', airfoil_path)
+        # print('Mesh output path is', mesh_path, '\n')
 
         airfoils = self.batch_control['Airfoils']['names']
         trailing_edges = self.batch_control['Airfoils']['trailing_edges']
 
-        message = 'Airfoils to mesh:'
-        print(message)
-        logger.info(message)
-        for airfoil in airfoils:
-            message = f'     --> {airfoil}'
-            print(message)
-            logger.info(message)
-        
-        print('\n')
+        # message = 'Airfoils to mesh:'
+        # print(message)
+        # logger.info(message)
+        # for airfoil in airfoils:
+        #     message = f'     --> {airfoil}'
+        #     print(message)
+        #     logger.info(message)
+        #
+        # print('\n')
 
         for i, airfoil in enumerate(airfoils):
 
-            message = f'Starting batch meshing for airfoil {airfoil}'
-            print(message)
-            logger.info(message)
+            # message = f'Starting batch meshing for airfoil {airfoil}'
+            # print(message)
+            # logger.info(message)
 
             # load airfoil
             basename = os.path.splitext(airfoil)[0]
@@ -150,14 +150,14 @@ class Batch:
             # generate boundaries from mesh connectivity
             wind_tunnel.makeBoundaries()
 
-            message = f'Finished batch meshing for airfoil {airfoil}'
-            print(message)
-            logger.info(message)
+            # message = f'Finished batch meshing for airfoil {airfoil}'
+            # print(message)
+            # logger.info(message)
 
             # export mesh
-            message = f'Starting mesh export for airfoil {airfoil}'
-            print(message)
-            logger.info(message)
+            # message = f'Starting mesh export for airfoil {airfoil}'
+            # print(message)
+            # logger.info(message)
 
             for output_format in output_formats:
                 extension = {'FLMA': '.flma',
